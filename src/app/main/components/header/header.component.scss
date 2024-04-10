@@ -1,0 +1,44 @@
+@import "/src/styles.scss";
+
+nav > span {
+  width: fit-content;
+  transition: 0.2s;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 300;
+}
+
+nav > span:hover {
+  padding: 5px 10px;
+  font-weight: 500;
+  background: linear-gradient(var(--bg-color) 100%, var(--bg-color) 100%)
+      padding-box,
+    linear-gradient(to top right, #ff1cf7 0%, #00f0ff 100%) border-box;
+  border: 2px solid transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  position: fixed;
+  width: 100dvw;
+  left: 0;
+  backdrop-filter: blur(6.5px);
+  padding: 0 15dvw;
+  z-index: 1000;
+}

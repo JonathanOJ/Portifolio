@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import "/src/reset.scss";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+$bg-color: #121212;
+$bg-color-opacity: rgba(18, 18, 18, 0.35);
+$font-color: #fff;
+$primary-color: #00d2df;
+$grey: #c4c4c4;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.dark {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+.light {
+  background-color: #fff !important;
+  color: #121212 !important;
+}
+
+.border-color-primary {
+  background: linear-gradient(var(--bg-color) 100%, var(--bg-color) 100%)
+      padding-box,
+    linear-gradient(to top right, #ff1cf7 0%, #00f0ff 100%) border-box;
+}
+
+.border-color-secondary {
+  background: linear-gradient(var(--bg-color) 100%, var(--bg-color) 100%)
+      padding-box,
+    linear-gradient(to top right, #d24074 0%, #6518b4 100%) border-box;
+}
+
+.custom-border {
+  padding: 5px 10px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
+}

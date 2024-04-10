@@ -1,0 +1,43 @@
+.primary-main-text {
+  font-weight: 600;
+  font-size: 58px;
+  line-height: normal;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.secondary-main-text {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.button-profiles {
+  height: 45px;
+  border-radius: 4px;
+  width: 140px;
+  display: flex;
+  gap: 5px;
+  transition: 0.2s !important;
+}
+
+.button-profiles:hover {
+  transform: scale(1.05) !important;
+}
+
+.container-profile-buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 25px;
+}
+
+p {
+  color: var(--grey);
+}
+
+.photo-profile {
+  padding-left: 50px;
+  width: fit-content;
+  height: 300px;
+  border-left: 3px solid #00d2df;
+  border-radius: 4px 0 4px 0;
+}

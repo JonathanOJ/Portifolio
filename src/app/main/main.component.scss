@@ -1,0 +1,8 @@
+@import "/src/styles.scss";
+
+.background {
+  min-height: 100dvh;
+  height: fit-content;
+  background-color: #fff;
+  transition: 0.2s;
+}

@@ -1,0 +1,93 @@
+<section style="display: flex; width: 100%; height: 90dvh">
+  <div
+    style="
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    "
+  >
+    <h1 class="animate__animated animate__fadeInTopLeft secondary-main-text">
+      OLÁ, EU SOU
+    </h1>
+    <h3 class="animate__animated animate__fadeInLeft primary-main-text">
+      JONATHAN JACOBOVSKI
+    </h3>
+    <h1 class="animate__animated animate__fadeInBottomLeft secondary-main-text">
+      DESENVOLVEDOR FULL-STACK
+    </h1>
+
+    <div class="container-profile-buttons">
+      <button
+        (click)="redirect('linkedin')"
+        class="custom-border border-color-primary button-profiles animate__flipInX animate__animated"
+      >
+        <mat-icon svgIcon="linkedin"></mat-icon>
+        LinkedIn
+      </button>
+      <button
+        (click)="redirect('github')"
+        class="custom-border border-color-secondary button-profiles animate__flipInX animate__animated"
+      >
+        <mat-icon svgIcon="github"></mat-icon>
+        GitHub
+      </button>
+    </div>
+  </div>
+  <div style="width: 50%">
+    <img
+      style="width: 170%; height: 100%; position: relative; right: 26%"
+      src="../../../../assets/LooperBG.png"
+      alt=""
+    />
+  </div>
+</section>
+<section style="display: flex; width: 100%; gap: 5dvw">
+  <div style="width: 50%" data-aos="fade-right">
+    <img
+      class="photo-profile animate__animated animate__fadeInLeft"
+      src="../../../../assets/profilePhoto.png"
+      alt=""
+    />
+  </div>
+  <div style="width: 50%; height: fit-content" data-aos="fade-left">
+    <h2
+      class="animate__animated animate__fadeInTopRight"
+      style="font-weight: 600; font-size: 28px"
+    >
+      SOBRE MIM
+    </h2>
+    <h1
+      class="animate__animated animate__fadeInRight"
+      style="font-weight: 500; font-size: 24px"
+    >
+      Dois Vizinhos, Brasil
+    </h1>
+    <p
+      class="animate__animated animate__fadeInBottomRight"
+      style="font-weight: 300; font-size: 18px"
+    >
+      Desenvolvedor com experiência em programação, focado no desenvolvimento de
+      aplicações web utilizando Angular e Java. Experiência no design e
+      implementação de interfaces de usuário responsivas, bem como no
+      gerenciamento de bancos de dados e na utilização de API' s Rest e
+      gerenciamento em nuvem utilizando a AWS.
+    </p>
+    <div class="container-profile-buttons">
+      <button
+        (click)="downloadPDF()"
+        class="custom-border border-color-primary button-profiles animate__flipInX animate__animated"
+      >
+        <mat-icon svgIcon="cloud-download"></mat-icon>
+        Currículo
+      </button>
+      <button
+        (click)="emailTo()"
+        class="custom-border border-color-secondary button-profiles animate__flipInX animate__animated"
+      >
+        <mat-icon svgIcon="email"></mat-icon>
+        E-mail
+      </button>
+    </div>
+  </div>
+</section>
