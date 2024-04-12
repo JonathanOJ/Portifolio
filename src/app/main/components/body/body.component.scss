@@ -11,25 +11,6 @@
   font-size: 28px;
 }
 
-.button-profiles {
-  height: 45px;
-  border-radius: 4px;
-  width: 140px;
-  display: flex;
-  gap: 5px;
-  transition: 0.2s !important;
-}
-
-.button-profiles:hover {
-  transform: scale(1.05) !important;
-}
-
-.container-profile-buttons {
-  margin-top: 50px;
-  display: flex;
-  gap: 25px;
-}
-
 p {
   color: var(--grey);
 }

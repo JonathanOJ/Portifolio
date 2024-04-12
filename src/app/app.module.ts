@@ -12,6 +12,9 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { AboutMeComponent } from './main/components/body/components/about-me/about-me.component';
+import { ExperienceInfoComponent } from './main/components/body/components/experience-info/experience-info.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
     BodyComponent,
     FooterComponent,
     ToogleThemeComponent,
+    AboutMeComponent,
+    ExperienceInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

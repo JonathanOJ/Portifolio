@@ -1,0 +1,32 @@
+<section style="display: flex; width: 100%; gap: 5dvw">
+  <div style="width: 50%" data-aos="fade-right">
+    <img
+      class="photo-profile animate__animated animate__fadeInLeft"
+      src="../../../../assets/profilePhoto.png"
+      alt=""
+    />
+  </div>
+  <div style="width: 50%; height: fit-content" data-aos="fade-left">
+    <h2 style="font-weight: 600; font-size: 28px">SOBRE MIM</h2>
+    <h1 style="font-weight: 500; font-size: 24px">Dois Vizinhos, Brasil</h1>
+    <p style="font-weight: 300; font-size: 18px">
+      {{ user.description }}
+    </p>
+    <div class="container-profile-buttons">
+      <button
+        (click)="downloadPDF()"
+        class="custom-border border-color-primary button-profiles"
+      >
+        <mat-icon svgIcon="cloud-download"></mat-icon>
+        Currículo
+      </button>
+      <button
+        (click)="emailTo()"
+        class="custom-border border-color-secondary button-profiles"
+      >
+        <mat-icon svgIcon="email"></mat-icon>
+        E-mail
+      </button>
+    </div>
+  </div>
+</section>

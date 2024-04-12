@@ -1,31 +1,79 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Repository } from 'src/app/models/repository.model';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss'],
 })
-export class BodyComponent implements OnInit {
+export class BodyComponent implements OnInit, OnDestroy {
   showSectionsAboutMe: boolean = false;
-  constructor() {}
+  user: User = new User();
+  repositorys: Repository[] = [];
 
-  myFunction() {
-    console.log('hola');
-  }
+  getUserSub: Subscription = new Subscription();
+  getRepositorysSub: Subscription = new Subscription();
+
+  constructor(private httpClient: HttpClient) {}
+
   ngOnInit(): void {
-    document.addEventListener('scroll', () => {
-      console.log(window.scrollY);
-      this.showSectionsAboutMe = window.scrollY > 100;
-    });
-    window.onscroll = () => {
-      this.myFunction();
-    };
+    this.getUser();
+    this.getRepositorys();
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e: any) {
-    console.log(window.scrollY);
-    this.showSectionsAboutMe = window.scrollY > 100;
+  ngOnDestroy(): void {
+    this.getUserSub ? this.getUserSub.unsubscribe() : null;
+    this.getRepositorysSub ? this.getRepositorysSub.unsubscribe() : null;
+  }
+
+  getUser() {
+    this.getUserSub = this.httpClient
+      .get('https://api.github.com/users/JonathanOJ')
+      .subscribe({
+        next: (data: any) => {
+          this.handleInfoUser(data);
+        },
+        error: (error: any) => {
+          console.log(error);
+        },
+      });
+  }
+
+  handleInfoUser(githubInfo: any) {
+    githubInfo.name ? (this.user.name = githubInfo.name) : null;
+    githubInfo.avatar_url ? (this.user.image = githubInfo.avatar_url) : null;
+    githubInfo.html_url ? (this.user.githubLink = githubInfo.html_url) : null;
+    this.user.description =
+      'Desenvolvedor com experiência em programação, focado no desenvolvimento' +
+      ' de aplicações web utilizando Angular e Java. Experiência no design e implementação' +
+      ' de interfaces de usuário responsivas, bem como no gerenciamento de bancos de dados' +
+      " e na utilização de API' s Rest e gerenciamento em nuvem utilizando a AWS.";
+  }
+
+  getRepositorys() {
+    this.getRepositorysSub = this.httpClient
+      .get('https://api.github.com/users/JonathanOJ/repos')
+      .subscribe({
+        next: (data: any) => {
+          this.repositorys = data.map((repository: any) => {
+            let repo = new Repository();
+            repo.name = repository.name;
+            repo.description = repository.description;
+            repo.languages = repository.topics;
+            repo.repository_link = repository.html_url;
+            repo.updated_at = new Date(repository.updated_at);
+            return repo;
+          });
+
+          console.log(this.repositorys);
+        },
+        error: (error: any) => {
+          console.log(error);
+        },
+      });
   }
 
   redirect(site: String) {
@@ -37,16 +85,5 @@ export class BodyComponent implements OnInit {
         '_blank'
       );
     }
-  }
-
-  downloadPDF() {
-    window.open(
-      '../../../../assets/Curriculum Jonathan O. Jacobovski.pdf',
-      '_blank'
-    );
-  }
-
-  emailTo() {
-    window.open('mailto:jonathan_jacobovski@hotmail.com', '_blank');
   }
 }
