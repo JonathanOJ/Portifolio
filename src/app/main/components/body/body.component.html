@@ -1,4 +1,4 @@
-<section style="display: flex; width: 100%; height: 90dvh">
+<section style="display: flex; width: 100%; padding-top: 12vh">
   <div
     style="
       width: 50%;
@@ -11,7 +11,7 @@
       OLÁ, EU SOU
     </h1>
     <h3 class="animate__animated animate__fadeInLeft primary-main-text">
-      JONATHAN JACOBOVSKI
+      {{ user.name }}
     </h3>
     <h1 class="animate__animated animate__fadeInBottomLeft secondary-main-text">
       DESENVOLVEDOR FULL-STACK
@@ -42,5 +42,10 @@
     />
   </div>
 </section>
-<about-me [user]="user"></about-me>
-<experience-info></experience-info>
+<section
+  style="display: flex; flex-direction: column; gap: 200px; padding-top: 5vh"
+>
+  <about-me [user]="user"></about-me>
+  <experience-info></experience-info>
+  <repositorys-info [repositorys]="repositorys"></repositorys-info>
+</section>

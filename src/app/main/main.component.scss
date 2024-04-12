@@ -1,6 +1,8 @@
 @import "/src/styles.scss";
 
 .background {
+  padding: 0 15dvw 0;
+  overflow-x: hidden;
   min-height: 100dvh;
   height: fit-content;
   background-color: #fff;

@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AboutMeComponent } from './main/components/body/components/about-me/about-me.component';
 import { ExperienceInfoComponent } from './main/components/body/components/experience-info/experience-info.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { RepositorysInfoComponent } from './main/components/body/components/repositorys-info/repositorys-info.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     ToogleThemeComponent,
     AboutMeComponent,
     ExperienceInfoComponent,
+    RepositorysInfoComponent,
   ],
   imports: [
     BrowserModule,

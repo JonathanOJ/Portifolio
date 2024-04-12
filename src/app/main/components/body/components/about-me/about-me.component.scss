@@ -1,7 +1,22 @@
 .photo-profile {
-  padding-left: 50px;
   width: fit-content;
   height: 300px;
   border-left: 3px solid #00d2df;
   border-radius: 4px 0 4px 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.city {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--grey);
 }

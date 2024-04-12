@@ -1,15 +1,9 @@
-<section style="display: flex; width: 100%; gap: 5dvw">
-  <div style="width: 50%" data-aos="fade-right">
-    <img
-      class="photo-profile animate__animated animate__fadeInLeft"
-      src="../../../../assets/profilePhoto.png"
-      alt=""
-    />
-  </div>
-  <div style="width: 50%; height: fit-content" data-aos="fade-left">
-    <h2 style="font-weight: 600; font-size: 28px">SOBRE MIM</h2>
-    <h1 style="font-weight: 500; font-size: 24px">Dois Vizinhos, Brasil</h1>
-    <p style="font-weight: 300; font-size: 18px">
+<section style="display: flex; width: 100%; gap: 200px">
+  <img class="photo-profile" [src]="user.image" alt="" data-aos="fade-right" />
+  <div style="height: fit-content" data-aos="fade-left">
+    <h2 class="title">SOBRE MIM</h2>
+    <h1 class="city">Dois Vizinhos, Brasil</h1>
+    <p class="description">
       {{ user.description }}
     </p>
     <div class="container-profile-buttons">

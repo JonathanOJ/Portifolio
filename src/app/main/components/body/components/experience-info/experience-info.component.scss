@@ -1,6 +1,69 @@
 ::ng-deep .mat-mdc-tab-group {
   flex-direction: row !important;
+  gap: 150px;
 }
 ::ng-deep .mat-mdc-tab-labels {
   flex-direction: column !important;
+}
+
+::ng-deep
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active
+  .mdc-tab__text-label {
+  color: var(--font-color) !important;
+  font-size: 18px !important;
+}
+
+::ng-deep
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled)
+  .mdc-tab-indicator__content--underline {
+  border-color: var(--primary-color) !important;
+  position: relative;
+  top: 0px;
+  height: 50px;
+  border-top: none;
+  border-left: 2px solid;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  color: var(--grey) !important;
+}
+
+::ng-deep .mdc-tab__content {
+  min-width: 215px;
+}
+
+.job-name {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.job-description {
+  font-size: 18px;
+  color: var(--grey);
+  line-height: 28px;
+}
+
+.job-container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.job-title {
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0;
+}
+
+.job-title-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.experience-title {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
