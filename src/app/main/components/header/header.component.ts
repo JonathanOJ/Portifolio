@@ -5,4 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor() {}
+
+  scrollTo(where: string) {
+    const element: HTMLElement | null = document.getElementById(where);
+    if (element !== null) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}

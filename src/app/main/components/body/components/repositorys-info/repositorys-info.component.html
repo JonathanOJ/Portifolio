@@ -1,0 +1,68 @@
+<section class="main-container">
+  <section data-aos="fade-right">
+    <h2 class="title-section">PRINCIPAIS PROJETOS</h2>
+    <section class="repository-container">
+      <div *ngFor="let repository of principlesRepositories" class="card">
+        <div class="repository">
+          <img
+            class="repository-photo"
+            [src]="repository.image"
+            alt=""
+            id="repositorys"
+          />
+
+          <div class="repository-name-container">
+            <h1 style="margin: 0">
+              {{ repository.name }}
+            </h1>
+            <span>{{ repository.pushed_at }}</span>
+          </div>
+          <p class="repository-description">{{ repository.description }}</p>
+          <div class="container-profile-buttons" style="margin: 0">
+            <a
+              [href]="repository.repository_link"
+              target="_blank"
+              class="custom-border border-color-primary button-profiles"
+            >
+              <mat-icon svgIcon="link-variant"></mat-icon>
+              Visualizar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section>
+    <h2 class="title-section">DEMAIS PROJETOS</h2>
+    <section class="repository-container" style="row-gap: 10dvh">
+      <div
+        *ngFor="let repository of otherRepositories; let i = index"
+        data-aos="fade-up"
+        class="card shadow-others"
+      >
+        <div class="repository others">
+          <div class="repository-name-container">
+            <h1 style="margin: 0">
+              {{ repository.name }}
+            </h1>
+            <span>{{ repository.pushed_at }}</span>
+          </div>
+          <p class="repository-description">{{ repository.description }}</p>
+        </div>
+        <div
+          class="container-profile-buttons"
+          style="margin: 0; margin-top: 25px"
+        >
+          <a
+            [href]="repository.repository_link"
+            target="_blank"
+            class="custom-border border-color-primary button-profiles"
+          >
+            <mat-icon svgIcon="link-variant"></mat-icon>
+            Visualizar
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

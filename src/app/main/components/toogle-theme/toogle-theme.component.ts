@@ -43,10 +43,14 @@ export class ToogleThemeComponent implements OnInit {
       document.documentElement.style.setProperty('--font-color', 'white');
       document.documentElement.style.setProperty('--primary-color', '#00d2df');
       document.documentElement.style.setProperty('--grey', '#c4c4c4');
+      document.documentElement.style.setProperty(
+        '--shadow',
+        'rgba(247, 247, 247, 0.25)'
+      );
     } else {
       background[0].classList.add('light');
       background[0].classList.remove('dark');
-      document.documentElement.style.setProperty('--bg-color', 'white');
+      document.documentElement.style.setProperty('--bg-color', '#F7F7F7');
       document.documentElement.style.setProperty(
         '--bg-color-opacity',
         'rgba(255, 255, 255, 0.35)'
@@ -54,6 +58,10 @@ export class ToogleThemeComponent implements OnInit {
       document.documentElement.style.setProperty('--font-color', '#121212');
       document.documentElement.style.setProperty('--primary-color', '#00b0ff');
       document.documentElement.style.setProperty('--grey', '#888888');
+      document.documentElement.style.setProperty(
+        '--shadow',
+        'rgba(18, 18, 18, 0.25)'
+      );
     }
   }
 }

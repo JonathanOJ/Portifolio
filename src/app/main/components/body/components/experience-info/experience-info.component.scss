@@ -32,6 +32,10 @@
   min-width: 215px;
 }
 
+::ng-deep .mat-mdc-tab-body-wrapper {
+  border-radius: 8px;
+  box-shadow: var(--shadow) 0px 4px 10px;
+}
 .job-name {
   font-size: 16px;
   color: var(--primary-color);
@@ -44,10 +48,11 @@
 }
 
 .job-container {
-  width: 900px;
+  max-width: 40dvw;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 15px;
 }
 
 .job-title {
@@ -62,7 +67,7 @@
   justify-content: space-between;
 }
 
-.experience-title {
+.title-section {
   font-weight: 600;
   font-size: 28px;
   margin-bottom: 30px;

@@ -3,5 +3,6 @@ export class Repository {
   description: string = '';
   languages: string[] = [];
   repository_link: string = '';
-  updated_at: Date = new Date();
+  pushed_at: string = '';
+  image: string = '';
 }

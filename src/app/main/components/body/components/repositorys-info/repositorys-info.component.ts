@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Repository } from 'src/app/models/repository.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Repository } from 'src/app/models/repository.model';
   templateUrl: './repositorys-info.component.html',
   styleUrls: ['./repositorys-info.component.scss'],
 })
-export class RepositorysInfoComponent implements OnInit {
+export class RepositorysInfoComponent implements OnChanges {
   @Input() repositorys: Repository[] = [];
 
   principlesRepositories: Repository[] = [];
@@ -14,7 +14,7 @@ export class RepositorysInfoComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     this.handleRepositories(
       this.repositorys,
       this.principlesRepositories,
@@ -28,11 +28,26 @@ export class RepositorysInfoComponent implements OnInit {
     otherRepositories: Repository[]
   ): void {
     repositorys.forEach((repository: Repository) => {
-      if (repository.name === 'Kenai' || repository.name === 'LogMine') {
-        principlesRepositories.push(repository);
-      } else {
-        otherRepositories.push(repository);
+      if (
+        repository.name !== 'JonathanOJ' &&
+        repository.name !== 'rafaballerini'
+      ) {
+        if (repository.name === 'Kenai') {
+          repository.name === 'Kenai'
+            ? (repository.image = '../../../../../../assets/Kenai.png')
+            : '';
+          principlesRepositories.push(repository);
+        } else {
+          otherRepositories.push(repository);
+        }
       }
+    });
+    this.orderByDate(otherRepositories);
+  }
+
+  orderByDate(repositories: Repository[]): void {
+    repositories.sort((a: Repository, b: Repository) => {
+      return new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime();
     });
   }
 }

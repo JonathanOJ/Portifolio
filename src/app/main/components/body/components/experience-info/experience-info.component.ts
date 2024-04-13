@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BodyService } from '../body-service.service';
-import { JovsInfo } from 'src/app/models/jobsInfo.model';
+import { JobsInfo } from 'src/app/models/jobsInfo.model';
 
 @Component({
   selector: 'experience-info',
@@ -8,7 +8,7 @@ import { JovsInfo } from 'src/app/models/jobsInfo.model';
   styleUrls: ['./experience-info.component.scss'],
 })
 export class ExperienceInfoComponent implements OnInit {
-  jobsInfo: JovsInfo[] = [];
+  jobsInfo: JobsInfo[] = [];
 
   constructor(private bodyService: BodyService) {}
 

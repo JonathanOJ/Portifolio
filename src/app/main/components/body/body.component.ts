@@ -47,10 +47,12 @@ export class BodyComponent implements OnInit, OnDestroy {
     githubInfo.avatar_url ? (this.user.image = githubInfo.avatar_url) : null;
     githubInfo.html_url ? (this.user.githubLink = githubInfo.html_url) : null;
     this.user.description =
-      'Desenvolvedor com experiência em programação, focado no desenvolvimento' +
-      ' de aplicações web utilizando Angular e Java. Experiência no design e implementação' +
-      ' de interfaces de usuário responsivas, bem como no gerenciamento de bancos de dados' +
-      " e na utilização de API' s Rest e gerenciamento em nuvem utilizando a AWS.";
+      'Sou um profissional apaixonado por tecnologia e desenvolvimento web. ' +
+      'Com vasta experiência em programação com domínio nas linguagens Angular e Java,' +
+      ' além de ter expertise em bancos de dados PostgreSQL. Minha jornada inclui a' +
+      ' manipulação de APIs e o uso eficiente dos serviços em nuvem da AWS para garantir' +
+      ' escalabilidade e segurança em meus projetos. Sou um desenvolvedor completo, focado ' +
+      'em criar soluções inovadoras e eficientes para desafios complexos no ambiente web.';
   }
 
   getRepositorys() {
@@ -64,16 +66,21 @@ export class BodyComponent implements OnInit, OnDestroy {
             repo.description = repository.description;
             repo.languages = repository.topics;
             repo.repository_link = repository.html_url;
-            repo.updated_at = new Date(repository.updated_at);
+            repo.pushed_at = this.getDateFormat(repository.pushed_at);
             return repo;
           });
-
-          console.log(this.repositorys);
         },
         error: (error: any) => {
           console.log(error);
         },
       });
+  }
+
+  getDateFormat(date: string): string {
+    const dateFormated = new Date(date);
+    return `${dateFormated.getDate()}/${
+      dateFormated.getMonth() + 1
+    }/${dateFormated.getFullYear()}`;
   }
 
   redirect(site: String) {

@@ -2,7 +2,7 @@
   width: fit-content;
   height: 300px;
   border-left: 3px solid #00d2df;
-  border-radius: 4px 0 4px 0;
+  border-radius: 8px;
 }
 
 .title {
@@ -18,5 +18,13 @@
 .description {
   font-weight: 300;
   font-size: 18px;
+  line-height: 28px;
   color: var(--grey);
+}
+
+.card {
+  height: fit-content;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px var(--shadow);
 }
