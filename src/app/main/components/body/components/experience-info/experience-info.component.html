@@ -1,6 +1,6 @@
 <h2 class="title-section" data-aos="fade-down-right">EXPERIÊNCIA</h2>
 <mat-tab-group data-aos="fade-right" id="experience">
-  <mat-tab [label]="job.company" *ngFor="let job of jobsInfo">
+  <mat-tab [label]="job.company" *ngFor="let job of jobsInfo; let i = index">
     <section class="job-container">
       <div class="job-title-container">
         <h1>

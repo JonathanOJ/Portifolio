@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 
 @Component({
@@ -7,7 +8,11 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'portifolio';
+  title = 'Portifólio';
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('pt');
+  }
 
   ngOnInit(): void {
     AOS.init({

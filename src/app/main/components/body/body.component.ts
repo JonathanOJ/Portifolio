@@ -46,13 +46,6 @@ export class BodyComponent implements OnInit, OnDestroy {
     githubInfo.name ? (this.user.name = githubInfo.name) : null;
     githubInfo.avatar_url ? (this.user.image = githubInfo.avatar_url) : null;
     githubInfo.html_url ? (this.user.githubLink = githubInfo.html_url) : null;
-    this.user.description =
-      'Sou um profissional apaixonado por tecnologia e desenvolvimento web. ' +
-      'Com vasta experiência em programação com domínio nas linguagens Angular e Java,' +
-      ' além de ter expertise em bancos de dados PostgreSQL. Minha jornada inclui a' +
-      ' manipulação de APIs e o uso eficiente dos serviços em nuvem da AWS para garantir' +
-      ' escalabilidade e segurança em meus projetos. Sou um desenvolvedor completo, focado ' +
-      'em criar soluções inovadoras e eficientes para desafios complexos no ambiente web.';
   }
 
   getRepositorys() {

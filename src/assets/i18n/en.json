@@ -1,0 +1,33 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "portfolio": "Portfolio"
+  },
+  "body": {
+    "greeting": "HI, I'M",
+    "role": "FULL-STACK DEVELOPER"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "city": "Dois Vizinhos - PR, Brazil",
+    "description": "I am a professional passionate about technology and web development. With extensive experience in programming with skills in Angular and Java languages, in addition to having expertise in PostgreSQL databases. My journey includes manipulating APIs and efficiently using AWS cloud services to ensure scalability and security in my projects. I am a complete developer, focused on creating innovative and efficient solutions for complex challenges in the web environment."
+  },
+  "experince": {
+    "title": "EXPERIENCE",
+    "job1": {
+      "company": "LeadFinder SmartCRM",
+      "role": "Full-Stack Developer",
+      "date": "March 2023 - Current",
+      "description": "As a full-stack developer at LeadFinder, I gained a lot of experience with web development using Angular and Java. Furthermore, I gained a lot of experience using Rest APIs and managing databases using PostgreSQL, as well as the other tools that Angular and Java provide. This made me a more complete developer and prepared for the challenges of the market."
+    },
+    "job2": {
+      "company": "CISS S.A",
+      "role": "Customer Support - Trainee",
+      "date": "September 2022 - March 2023",
+      "description": "As a customer support analyst at CISS S.A., I gained a lot of experience with customer service, problem solving and learned a lot about the CISS retail management system. Furthermore, I gained a lot of experience using WinSQL to perform queries on a SQL Server database, which provided me with significant learning in data management."
+    }
+  }
+}

@@ -9,13 +9,20 @@ import { BodyComponent } from './main/components/body/body.component';
 import { FooterComponent } from './main/components/footer/footer.component';
 import { ToogleThemeComponent } from './main/components/toogle-theme/toogle-theme.component';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { AboutMeComponent } from './main/components/body/components/about-me/about-me.component';
 import { ExperienceInfoComponent } from './main/components/body/components/experience-info/experience-info.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RepositorysInfoComponent } from './main/components/body/components/repositorys-info/repositorys-info.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatMenuModule } from '@angular/material/menu';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -37,6 +44,14 @@ import { RepositorysInfoComponent } from './main/components/body/components/repo
     BrowserAnimationsModule,
     MatButtonModule,
     MatTabsModule,
+    MatMenuModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,10 +1,10 @@
 <section id="about" style="display: flex; width: 100%; gap: 200px">
   <img class="photo-profile" [src]="user.image" alt="" data-aos="fade-right" />
   <div class="card" data-aos="fade-left">
-    <h2 class="title">SOBRE MIM</h2>
-    <h1 class="city">Dois Vizinhos, Brasil</h1>
+    <h2 class="title">{{ "about.title" | translate }}</h2>
+    <h1 class="city">{{ "about.city" | translate }}</h1>
     <p class="description">
-      {{ user.description }}
+      {{ "about.description" | translate }}
     </p>
     <div class="container-profile-buttons">
       <button
