@@ -21,13 +21,13 @@ export class HeaderComponent implements OnInit {
       value: 'pt',
       label: 'Português',
       acronym: 'Pt-Br',
-      icon: '../../../../assets/flags/brazil-flag.png',
+      icon: './../../../assets/flags/brazil-flag.png',
     },
     {
       value: 'en',
       label: 'English',
       acronym: 'En-Us',
-      icon: '../../../../assets/flags/eua-flag.png',
+      icon: './../../../assets/flags/eua-flag.png',
     },
   ];
 
