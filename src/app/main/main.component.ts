@@ -7,9 +7,4 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   ngOnInit(): void {}
-
-  logger() {
-    console.log(window.scrollY);
-    console.log(document.documentElement.scrollTop);
-  }
 }

@@ -50,13 +50,11 @@ export class RepositorysInfoComponent implements OnChanges {
 
   getIcon(repositoryList: Array<Repository>) {
     repositoryList.forEach((repository) => {
-      console.log(repository.languages);
       repository.languages.forEach((language) => {
         let icon = this.getIconProperties(language);
         repository.icons.push({ ...icon });
       });
     });
-    console.log(repositoryList);
   }
 
   getIconProperties(language: string): Language {

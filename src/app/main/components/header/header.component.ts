@@ -76,7 +76,6 @@ export class HeaderComponent implements OnInit {
   switchLanguage(language: any) {
     this.translate.use(language.value);
     this.languageSelected = language;
-    console.log(this.translate.currentLang);
   }
 
   scrollTo(where: string) {
