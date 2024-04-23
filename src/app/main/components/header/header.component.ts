@@ -21,13 +21,13 @@ export class HeaderComponent implements OnInit {
       value: 'pt',
       label: 'Português',
       acronym: 'Pt-Br',
-      icon: './../../../assets/flags/brazil-flag.png',
+      icon: './assets/flags/brazil-flag.png',
     },
     {
       value: 'en',
       label: 'English',
       acronym: 'En-Us',
-      icon: './../../../assets/flags/eua-flag.png',
+      icon: './assets/flags/eua-flag.png',
     },
   ];
 
@@ -58,17 +58,17 @@ export class HeaderComponent implements OnInit {
       case 'pt':
         this.languageSelected.label = 'Português';
         this.languageSelected.acronym = 'Pt-Br';
-        this.languageSelected.icon = '../../../../assets/flags/brazil-flag.png';
+        this.languageSelected.icon = './assets/flags/brazil-flag.png';
         break;
       case 'en':
         this.languageSelected.label = 'English';
         this.languageSelected.acronym = 'En-Us';
-        this.languageSelected.icon = './../../../assets/flags/eua-flag.png';
+        this.languageSelected.icon = './assets/flags/eua-flag.png';
         break;
       default:
         this.languageSelected.label = 'Português';
         this.languageSelected.acronym = 'Pt-Br';
-        this.languageSelected.icon = './../../../assets/flags/brazil-flag.png';
+        this.languageSelected.icon = './assets/flags/brazil-flag.png';
         break;
     }
   }

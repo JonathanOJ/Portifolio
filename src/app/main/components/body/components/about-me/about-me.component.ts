@@ -15,7 +15,7 @@ export class AboutMeComponent {
     this.handleWindowSize();
   }
   downloadPDF() {
-    window.open('./../../../assets/Jonathan CV.pdf', '_blank');
+    window.open('./assets/Jonathan CV.pdf', '_blank');
   }
 
   emailTo() {
