@@ -22,12 +22,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
-
-export function createTranslateLoader(http: HttpClient) {
-  console.log('translate loader running..');
-
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
