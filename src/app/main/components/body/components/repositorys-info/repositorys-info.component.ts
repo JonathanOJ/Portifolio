@@ -35,7 +35,7 @@ export class RepositorysInfoComponent implements OnChanges {
       ) {
         if (repository.name === 'Kenai') {
           repository.name === 'Kenai'
-            ? (repository.image = '../../../../../../assets/Kenai.png')
+            ? (repository.image = './../../../../../assets/Kenai.png')
             : '';
           principlesRepositories.push(repository);
         } else {

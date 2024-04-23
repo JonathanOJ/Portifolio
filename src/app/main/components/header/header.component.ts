@@ -63,12 +63,12 @@ export class HeaderComponent implements OnInit {
       case 'en':
         this.languageSelected.label = 'English';
         this.languageSelected.acronym = 'En-Us';
-        this.languageSelected.icon = '../../../../assets/flags/eua-flag.png';
+        this.languageSelected.icon = './../../../assets/flags/eua-flag.png';
         break;
       default:
         this.languageSelected.label = 'Português';
         this.languageSelected.acronym = 'Pt-Br';
-        this.languageSelected.icon = '../../../../assets/flags/brazil-flag.png';
+        this.languageSelected.icon = './../../../assets/flags/brazil-flag.png';
         break;
     }
   }
