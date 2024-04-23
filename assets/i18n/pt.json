@@ -1,0 +1,39 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "portfolio": "Portifólio"
+  },
+  "body": {
+    "greeting": "OLÁ, EU SOU",
+    "role": "DESENVOLVEDOR FULL-STACK"
+  },
+  "about": {
+    "title": "SOBRE MIM",
+    "city": "Dois Vizinhos - PR, Brasil",
+    "description": "Sou um profissional apaixonado por tecnologia e desenvolvimento web. Com vasta experiência em programação com domínio nas linguagens Angular e Java, além de ter expertise em bancos de dados PostgreSQL. Minha jornada inclui a manipulação de APIs e o uso eficiente dos serviços em nuvem da AWS para garantir escalabilidade e segurança em meus projetos. Sou um desenvolvedor completo, focado em criar soluções inovadoras e eficientes para desafios complexos no ambiente web."
+  },
+  "experience": {
+    "title": "EXPERIÊNCIA",
+    "job1": {
+      "company": "LeadFinder SmartCRM",
+      "role": "Desenvolvedor Full-Stack",
+      "date": "Março 2023 - Atual",
+      "description": "Como desenvolvedor Full Stack, minha primeira experiência foi na empresa LeadFinder, onde trabalho com tecnologias como Angular com TypeScript, Java e PostGres (de março de 2023 até o momento). Contribuí ativamente para a implementação de novas funcionalidades no sistema, utilizando amplamente as ferramentas disponíveis no Angular. Liderando a reestruturação e otimização do software, implementei técnicas como Lazy Loading e detecção de mudanças para garantir uma experiência de usuário otimizada. No backend, fui responsável pelo desenvolvimento de métodos em Java e pela manipulação do banco de dados utilizando o Postgres. Minha experiência abrange tecnologias como Angular(8 ao 15), Java, JavaScript, TypeScript, PostGres, HTML, CSS, SASS, GitHub, CI/CD, Azure, Scrum, Metodologias Ágeis, API Rest, AWS, UI/UX."
+    },
+    "job2": {
+      "company": "CISS S.A",
+      "role": "Suporte ao Cliente - Trainee",
+      "date": "Setembro 2022 - Março 2023",
+      "description": "Trabalhei como suporte técnico em um software de gestão de varejo, onde fui responsável pelo contato direto com os clientes para resolver problemas relacionados ao uso do sistema. Durante essa experiência, desenvolvi habilidades sólidas de comunicação e aprendi a resolver problemas dos usuários finais de forma rápida e eficaz, valorizando sempre uma experiência positiva para o cliente. Utilizei ferramentas como WinSQL para manipulação de dados."
+    }
+  },
+  "main-projects": {
+    "title": "PROJETOS PRINCIPAIS"
+  },
+  "others-projects": {
+    "title": "DEMAIS PROJETOS"
+  }
+}

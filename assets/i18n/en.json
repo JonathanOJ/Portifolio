@@ -1,0 +1,39 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "portfolio": "Portfolio"
+  },
+  "body": {
+    "greeting": "HI, I'M",
+    "role": "FULL-STACK DEVELOPER"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "city": "Dois Vizinhos - PR, Brazil",
+    "description": "I am a professional passionate about technology and web development. With extensive experience in programming with skills in Angular and Java languages, in addition to having expertise in PostgreSQL databases. My journey includes manipulating APIs and efficiently using AWS cloud services to ensure scalability and security in my projects. I am a complete developer, focused on creating innovative and efficient solutions for complex challenges in the web environment."
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "job1": {
+      "company": "LeadFinder SmartCRM",
+      "role": "Full-Stack Developer",
+      "date": "March 2023 - Current",
+      "description": "As a Full Stack developer, my first experience was at the company LeadFinder, where I work with technologies such as Angular with TypeScript, Java and PostGres (from March 2023 to date). I actively contributed to the implementation of new features in the system, widely using the tools available in Angular. Leading software restriction and optimization, I implemented techniques such as Lazy Load and change detection to ensure an optimized user experience. On the backend, I was responsible for developing methods in Java and manipulating the database using Postgres. My experience covers technologies such as Angular(8 to 15), Java, JavaScript, TypeScript, PostGres, HTML, CSS, SASS, GitHub, CI/CD, Azure, Scrum, Agile Methodologies, Rest API, AWS, UI/UX."
+    },
+    "job2": {
+      "company": "CISS S.A",
+      "role": "Customer Support - Trainee",
+      "date": "September 2022 - March 2023",
+      "description": "I worked as technical support in a retail management software, where I was responsible for direct contact with customers to resolve problems related to the use of the system. During this experience, I developed solid communication skills and learned how to resolve end-user problems quickly and effectively, always valuing a positive customer experience. I used tools like WinSQL for data manipulation."
+    }
+  },
+  "main-projects": {
+    "title": "MAIN PROJECTS"
+  },
+  "others-projects": {
+    "title": "OTHER PROJECTS"
+  }
+}
