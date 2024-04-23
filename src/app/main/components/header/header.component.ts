@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -30,10 +31,24 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
-  constructor(private translate: TranslateService) {}
+  isMobile: boolean = false;
+
+  constructor(
+    private translate: TranslateService,
+    private breakpointObserver: BreakpointObserver
+  ) {}
 
   ngOnInit(): void {
     this.setOnInitLanguage();
+    this.handleWindowSize();
+  }
+
+  handleWindowSize() {
+    this.breakpointObserver
+      .observe([Breakpoints.XSmall, Breakpoints.Small])
+      .subscribe((result) => {
+        this.isMobile = result.matches;
+      });
   }
 
   setOnInitLanguage() {

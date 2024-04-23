@@ -1,17 +1,36 @@
-<h2 class="title-section" data-aos="fade-down-right">EXPERIÊNCIA</h2>
-<mat-tab-group data-aos="fade-right" id="experience">
-  <mat-tab [label]="job.company" *ngFor="let job of jobsInfo; let i = index">
+<h2 class="title-section" data-aos="fade-down-right">
+  {{ "experience.title" | translate }}
+</h2>
+<mat-tab-group data-aos="fade-right">
+  <mat-tab label="LeadFinder SmartCRM">
     <section class="job-container">
       <div class="job-title-container">
-        <h1>
-          {{ job.title }}
-        </h1>
-        <span>{{ job.date }}</span>
+        <h1>{{ "experience.job1.company" | translate }}</h1>
+        <span class="experience-date">{{
+          "experience.job1.date" | translate
+        }}</span>
       </div>
 
-      <span class="job-name">{{ job.company }}</span>
+      <span id="experience" class="job-name">{{
+        "experience.job1.company" | translate
+      }}</span>
       <p class="job-description">
-        {{ job.description }}
+        {{ "experience.job1.description" | translate }}
+      </p>
+    </section>
+  </mat-tab>
+  <mat-tab label="CISS S.A">
+    <section class="job-container">
+      <div class="job-title-container">
+        <h1>{{ "experience.job2.company" | translate }}</h1>
+        <span class="experience-date">{{
+          "experience.job2.date" | translate
+        }}</span>
+      </div>
+
+      <span class="job-name">{{ "experience.job2.company" | translate }}</span>
+      <p class="job-description">
+        {{ "experience.job2.description" | translate }}
       </p>
     </section>
   </mat-tab>

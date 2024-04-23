@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Language } from 'src/app/models/language.model';
 import { Repository } from 'src/app/models/repository.model';
 
 @Component({
@@ -42,7 +43,68 @@ export class RepositorysInfoComponent implements OnChanges {
         }
       }
     });
+    this.getIcon(principlesRepositories);
+    this.getIcon(otherRepositories);
     this.orderByDate(otherRepositories);
+  }
+
+  getIcon(repositoryList: Array<Repository>) {
+    repositoryList.forEach((repository) => {
+      console.log(repository.languages);
+      repository.languages.forEach((language) => {
+        let icon = this.getIconProperties(language);
+        repository.icons.push({ ...icon });
+      });
+    });
+    console.log(repositoryList);
+  }
+
+  getIconProperties(language: string): Language {
+    let icon: Language = new Language();
+    switch (language) {
+      case 'typescript':
+        icon.name = 'TypeScript';
+        icon.icon = 'language-typescript';
+        icon.color = '#007ACC';
+        return icon;
+      case 'javascript':
+        icon.name = 'JavaScript';
+        icon.icon = 'language-javascript';
+        icon.color = '#F7DF1E';
+        return icon;
+      case 'css':
+        icon.name = 'CSS';
+        icon.icon = 'language-css3';
+        icon.color = '#264DE4';
+        return icon;
+      case 'html':
+        icon.name = 'HTML';
+        icon.icon = 'language-html5';
+        icon.color = '#E34F26';
+        return icon;
+      case 'angular':
+        icon.name = 'Angular';
+        icon.icon = 'angular';
+        icon.color = '#DD0031';
+        return icon;
+      case 'java':
+        icon.name = 'Java';
+        icon.icon = 'language-java';
+        icon.color = '#B07219';
+        return icon;
+      case 'python':
+        icon.name = 'Python';
+        icon.icon = 'language-python';
+        icon.color = '#3572A5';
+        return icon;
+      case 'c':
+        icon.name = 'C';
+        icon.icon = 'language-c';
+        icon.color = '555555';
+        return icon;
+      default:
+        return icon;
+    }
   }
 
   orderByDate(repositories: Repository[]): void {

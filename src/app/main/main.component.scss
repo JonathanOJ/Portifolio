@@ -8,3 +8,9 @@
   background-color: #f7f7f7;
   transition: 0.2s;
 }
+
+@media (max-width: 768px) {
+  .background {
+    padding: 0 5.56vw;
+  }
+}

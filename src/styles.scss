@@ -72,3 +72,10 @@ body {
 .button-profiles:hover {
   transform: scale(1.05) !important;
 }
+
+@media (max-width: 768px) {
+  .button-profiles {
+    height: 40px;
+    width: 50%;
+  }
+}

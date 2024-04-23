@@ -2,7 +2,7 @@
   <h1 (click)="scrollTo('home')" style="margin: 0; cursor: pointer">
     {{ "header.portfolio" | translate }}
   </h1>
-  <nav style="display: flex; gap: 40px; align-items: center">
+  <nav *ngIf="!isMobile" style="display: flex; gap: 40px; align-items: center">
     <span (click)="scrollTo('home')">{{ "header.home" | translate }}</span>
     <span (click)="scrollTo('about')">{{ "header.about" | translate }}</span>
     <span (click)="scrollTo('experience')">{{
@@ -12,20 +12,15 @@
       "header.projects" | translate
     }}</span>
   </nav>
-  <div style="display: flex; align-items: center">
+  <div
+    style="display: flex; align-items: center"
+    *ngIf="!isMobile; else menuMobile"
+  >
     <button
       mat-icon-button
       [matMenuTriggerFor]="menu"
       aria-label="Translate options"
-      style="
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        font-size: 12px;
-        width: 80px;
-        gap: 5px;
-        height: 60px;
-      "
+      class="button-menu"
     >
       <img
         style="width: 18px; height: 18px"
@@ -51,4 +46,64 @@
     </mat-menu>
     <toogle-theme style="display: flex"> </toogle-theme>
   </div>
+  <ng-template #menuMobile>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="languageMenu"
+      aria-label="Translate options"
+      class="button-menu"
+    >
+      <img
+        style="width: 18px; height: 18px"
+        [src]="languageSelected.icon"
+        alt="languageSelected.label"
+      />
+      <span>{{ languageSelected.acronym }}</span>
+    </button>
+    <mat-menu #languageMenu="matMenu">
+      <button
+        mat-menu-item
+        *ngFor="let language of translteOptions"
+        [disabled]="languageSelected.value == language.value"
+        (click)="switchLanguage(language)"
+      >
+        <img
+          style="width: 20px; height: 20px"
+          [src]="language.icon"
+          alt="language.label"
+        />
+        <span>{{ language.label }}</span>
+      </button>
+    </mat-menu>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Translate options"
+      class="button-menu"
+    >
+      <mat-icon svgIcon="menu"></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          padding: 0 10px;
+          gap: 10px;
+        "
+      >
+        <toogle-theme style="display: flex; align-self: center"> </toogle-theme>
+        <span (click)="scrollTo('home')">{{ "header.home" | translate }}</span>
+        <span (click)="scrollTo('about')">{{
+          "header.about" | translate
+        }}</span>
+        <span (click)="scrollTo('experience')">{{
+          "header.experience" | translate
+        }}</span>
+        <span (click)="scrollTo('repositorys')">{{
+          "header.projects" | translate
+        }}</span>
+      </div>
+    </mat-menu>
+  </ng-template>
 </section>

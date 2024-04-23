@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -13,20 +14,33 @@ export class BodyComponent implements OnInit, OnDestroy {
   showSectionsAboutMe: boolean = false;
   user: User = new User();
   repositorys: Repository[] = [];
+  isMobile: boolean = false;
 
   getUserSub: Subscription = new Subscription();
   getRepositorysSub: Subscription = new Subscription();
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private breakpointObserver: BreakpointObserver
+  ) {}
 
   ngOnInit(): void {
     this.getUser();
     this.getRepositorys();
+    this.handleWindowSize();
   }
 
   ngOnDestroy(): void {
     this.getUserSub ? this.getUserSub.unsubscribe() : null;
     this.getRepositorysSub ? this.getRepositorysSub.unsubscribe() : null;
+  }
+
+  handleWindowSize() {
+    this.breakpointObserver
+      .observe([Breakpoints.XSmall, Breakpoints.Small])
+      .subscribe((result) => {
+        this.isMobile = result.matches;
+      });
   }
 
   getUser() {

@@ -72,3 +72,62 @@
   font-size: 28px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .title-section {
+    font-size: 24px;
+  }
+
+  ::ng-deep .mat-mdc-tab-group {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  ::ng-deep .mat-mdc-tab-labels {
+    flex-direction: row !important;
+  }
+
+  ::ng-deep .mdc-tab {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  ::ng-deep .mdc-tab__content {
+    min-width: fit-content;
+  }
+
+  ::ng-deep .mat-mdc-tab-body-wrapper {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  ::ng-deep
+    .mat-mdc-tab:not(.mat-mdc-tab-disabled)
+    .mdc-tab-indicator__content--underline {
+    border-bottom: 2px solid !important;
+    border-left: none !important;
+    border-color: var(--primary-color) !important;
+  }
+
+  ::ng-deep
+    .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active
+    .mdc-tab__text-label {
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .job-container {
+    max-width: 100%;
+  }
+
+  .experience-date {
+    font-size: 12px;
+  }
+
+  .job-description {
+    font-size: 14px;
+    text-align: justify;
+  }
+}

@@ -1,12 +1,5 @@
-<section id="home" style="display: flex; width: 100%; padding-top: 12vh">
-  <div
-    style="
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    "
-  >
+<section class="main-section" id="home">
+  <div class="greeting-container">
     <h1 class="animate__animated animate__fadeInTopLeft secondary-main-text">
       {{ "body.greeting" | translate }}
     </h1>
@@ -34,7 +27,7 @@
       </button>
     </div>
   </div>
-  <div style="width: 50%">
+  <div *ngIf="!isMobile" style="width: 50%">
     <img
       style="width: 170%; height: 100%; position: relative; right: 26%"
       src="../../../../assets/LooperBG.png"
@@ -42,9 +35,7 @@
     />
   </div>
 </section>
-<section
-  style="display: flex; flex-direction: column; gap: 200px; padding-top: 5vh"
->
+<section class="secondary-section">
   <about-me [user]="user"></about-me>
   <experience-info></experience-info>
   <repositorys-info [repositorys]="repositorys"></repositorys-info>

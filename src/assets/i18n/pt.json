@@ -21,13 +21,19 @@
       "company": "LeadFinder SmartCRM",
       "role": "Desenvolvedor Full-Stack",
       "date": "Março 2023 - Atual",
-      "description": "Como desenvolvedor full-stack na LeadFinder, adquiri muita experiência com desenvolvimento web utilizando Angular e Java. Além disso, adquiri muita experiência no uso de APIs Rest e no gerenciamento de bancos de dados utilizando PostgreSQL, bem como as outras ferramentas que Angular e Java fornecem. Isso me tornou um desenvolvedor mais completo e preparado para os desafios do mercado."
+      "description": "Como desenvolvedor Full Stack, minha primeira experiência foi na empresa LeadFinder, onde trabalho com tecnologias como Angular com TypeScript, Java e PostGres (de março de 2023 até o momento). Contribuí ativamente para a implementação de novas funcionalidades no sistema, utilizando amplamente as ferramentas disponíveis no Angular. Liderando a reestruturação e otimização do software, implementei técnicas como Lazy Loading e detecção de mudanças para garantir uma experiência de usuário otimizada. No backend, fui responsável pelo desenvolvimento de métodos em Java e pela manipulação do banco de dados utilizando o Postgres. Minha experiência abrange tecnologias como Angular(8 ao 15), Java, JavaScript, TypeScript, PostGres, HTML, CSS, SASS, GitHub, CI/CD, Azure, Scrum, Metodologias Ágeis, API Rest, AWS, UI/UX."
     },
     "job2": {
       "company": "CISS S.A",
       "role": "Suporte ao Cliente - Trainee",
       "date": "Setembro 2022 - Março 2023",
-      "description": "Como analista de suporte ao cliente na CISS S.A., adquiri muita experiência com atendimento ao cliente, resolução de problemas e aprendi muito sobre o sistema de gestão de varejo da CISS. Além disso, adquiri muita experiência no uso do WinSQL para realizar consultas em um banco de dados SQL Server, o que me proporcionou um aprendizado significativo em gerenciamento de dados."
+      "description": "Trabalhei como suporte técnico em um software de gestão de varejo, onde fui responsável pelo contato direto com os clientes para resolver problemas relacionados ao uso do sistema. Durante essa experiência, desenvolvi habilidades sólidas de comunicação e aprendi a resolver problemas dos usuários finais de forma rápida e eficaz, valorizando sempre uma experiência positiva para o cliente. Utilizei ferramentas como WinSQL para manipulação de dados."
     }
+  },
+  "main-projects": {
+    "title": "PROJETOS PRINCIPAIS"
+  },
+  "others-projects": {
+    "title": "DEMAIS PROJETOS"
   }
 }

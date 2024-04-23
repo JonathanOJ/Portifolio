@@ -19,6 +19,7 @@ import { RepositorysInfoComponent } from './main/components/body/components/repo
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -45,6 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonModule,
     MatTabsModule,
     MatMenuModule,
+    LayoutModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

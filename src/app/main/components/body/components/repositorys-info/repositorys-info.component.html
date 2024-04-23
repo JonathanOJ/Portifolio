@@ -1,6 +1,6 @@
 <section class="main-container">
   <section data-aos="fade-right">
-    <h2 class="title-section">PRINCIPAIS PROJETOS</h2>
+    <h2 class="title-section">{{ "main-projects.title" | translate }}</h2>
     <section class="repository-container">
       <div *ngFor="let repository of principlesRepositories" class="card">
         <div class="repository">
@@ -18,6 +18,15 @@
             <span>{{ repository.pushed_at }}</span>
           </div>
           <p class="repository-description">{{ repository.description }}</p>
+          <div style="display: flex; align-items: center; gap: 30px">
+            <mat-icon
+              [title]="language.name"
+              *ngFor="let language of repository.icons"
+              [svgIcon]="language.icon"
+              [style.color]="language.color"
+              class="icon"
+            ></mat-icon>
+          </div>
           <div class="container-profile-buttons" style="margin: 0">
             <a
               [href]="repository.repository_link"
@@ -33,7 +42,9 @@
     </section>
   </section>
   <section>
-    <h2 class="title-section" data-aos="fade-right">DEMAIS PROJETOS</h2>
+    <h2 class="title-section" data-aos="fade-right">
+      {{ "others-projects.title" | translate }}
+    </h2>
     <section class="repository-container" style="row-gap: 10dvh">
       <div
         *ngFor="let repository of otherRepositories; let i = index"
@@ -48,6 +59,22 @@
             <span>{{ repository.pushed_at }}</span>
           </div>
           <p class="repository-description">{{ repository.description }}</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+          "
+        >
+          <mat-icon
+            [title]="language.name"
+            *ngFor="let language of repository.icons"
+            [svgIcon]="language.icon"
+            [style.color]="language.color"
+            class="icon"
+          ></mat-icon>
         </div>
         <div
           class="container-profile-buttons"

@@ -22,3 +22,46 @@ p {
   border-left: 3px solid #00d2df;
   border-radius: 4px 0 4px 0;
 }
+
+.main-section {
+  display: flex;
+  width: 100%;
+  padding-top: 12vh;
+}
+
+.greeting-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secondary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding-top: 5vh;
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    padding-top: 200px;
+  }
+
+  .greeting-container {
+    width: 100%;
+  }
+
+  .secondary-main-text {
+    font-size: 16px;
+  }
+
+  .primary-main-text {
+    font-size: 26px;
+  }
+
+  .secondary-section {
+    padding-top: 220px;
+    gap: 100px;
+  }
+}

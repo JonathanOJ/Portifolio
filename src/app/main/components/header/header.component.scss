@@ -48,3 +48,22 @@ h1 {
   align-items: center;
   gap: 5px;
 }
+
+.button-menu {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 12px;
+  width: 80px;
+  gap: 5px;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .button-menu {
+    width: fit-content;
+  }
+}

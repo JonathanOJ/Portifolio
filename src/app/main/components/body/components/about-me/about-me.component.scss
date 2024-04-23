@@ -28,3 +28,17 @@
   border-radius: 8px;
   box-shadow: 0px 4px 10px var(--shadow);
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .city {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
