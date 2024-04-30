@@ -7,7 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./toogle-theme.component.scss'],
 })
 export class ToogleThemeComponent implements OnInit {
-  theme: string = 'light';
+  theme: string = 'dark';
 
   constructor(private cookies: CookieService) {}
 
