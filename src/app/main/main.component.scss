@@ -1,16 +1,9 @@
 @import "./src/styles.scss";
 
 .background {
-  padding: 0 15dvw 0;
   overflow: hidden;
   min-height: 100dvh;
   height: fit-content;
   background-color: #f7f7f7;
   transition: 0.2s;
-}
-
-@media (max-width: 768px) {
-  .background {
-    padding: 0 5.56vw;
-  }
 }

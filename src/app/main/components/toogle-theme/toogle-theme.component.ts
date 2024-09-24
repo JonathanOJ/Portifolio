@@ -17,7 +17,8 @@ export class ToogleThemeComponent implements OnInit {
 
   setTheme() {
     if (this.cookies.get('theme')) {
-      this.theme = this.cookies.get('theme');
+      // this.theme = this.cookies.get('theme');
+      this.theme = 'dark';
       this.setAnimatedTheme(this.theme);
     } else {
       this.setAnimatedTheme(this.theme);

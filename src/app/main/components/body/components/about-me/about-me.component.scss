@@ -20,13 +20,17 @@
   font-size: 18px;
   line-height: 28px;
   color: var(--grey);
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .card {
   height: fit-content;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px var(--shadow);
+  box-shadow: var(--shadow) 0px 0px 12px 0px;
+  background-color: #3e3e3e;
 }
 
 @media (max-width: 768px) {

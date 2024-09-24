@@ -13,7 +13,7 @@
   "about": {
     "title": "SOBRE MIM",
     "city": "Dois Vizinhos - PR, Brasil",
-    "description": "Sou um profissional apaixonado por tecnologia e desenvolvimento web. Com vasta experiência em programação com domínio nas linguagens Angular e Java, além de ter expertise em bancos de dados PostgreSQL. Minha jornada inclui a manipulação de APIs e o uso eficiente dos serviços em nuvem da AWS para garantir escalabilidade e segurança em meus projetos. Sou um desenvolvedor completo, focado em criar soluções inovadoras e eficientes para desafios complexos no ambiente web."
+    "description": "Como desenvolvedor Full Stack, adquiri experiência significativa na empresa LeadFinder, onde trabalho desde março de 2023. Durante esse período, fui fundamental na implementação de diversas funcionalidades no sistema, utilizando tecnologias como Angular (com TypeScript), Java e Postgres. Destaco como uma das minhas principais contribuições a criação de um projeto externo e totalmente novo: um chat interno integrado ao nosso sistema principal, desenvolvido como um micro-frontend. Essa abordagem não apenas melhorou o desempenho do sistema, mas também a usabilidade dos usuários. Liderei a reestruturação e otimização do software, implementando técnicas como Lazy Loading e detecção de mudanças, garantindo uma experiência de usuário otimizada. No backend, fui responsável pelo desenvolvimento de métodos em Java e pela gestão do banco de dados usando Postgres. Minha experiência abrange um amplo espectro de tecnologias, incluindo Angular (de versões 8 a 15), JavaScript, TypeScript, Micro-Frontend,HTML, CSS, SASS, GitHub, CI/CD, Azure, Scrum, Metodologias Ágeis, API Rest, AWS, e UI/UX."
   },
   "experience": {
     "title": "EXPERIÊNCIA",

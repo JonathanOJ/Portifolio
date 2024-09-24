@@ -38,6 +38,11 @@ export class RepositorysInfoComponent implements OnChanges {
             ? (repository.image = './assets/Kenai.png')
             : '';
           principlesRepositories.push(repository);
+        } else if (repository.name === 'Helpinho') {
+          repository.name === 'Helpinho'
+            ? (repository.image = './assets/Helpinho.png')
+            : '';
+          principlesRepositories.push(repository);
         } else {
           otherRepositories.push(repository);
         }
@@ -98,7 +103,32 @@ export class RepositorysInfoComponent implements OnChanges {
       case 'c':
         icon.name = 'C';
         icon.icon = 'language-c';
-        icon.color = '555555';
+        icon.color = '#555555';
+        return icon;
+      case 'nodejs':
+        icon.name = 'NodeJS';
+        icon.icon = 'nodejs';
+        icon.color = '#339933';
+        return icon;
+      case 'aws':
+        icon.name = 'AWS';
+        icon.icon = 'aws';
+        icon.color = '#FF9900';
+        return icon;
+      case 'lambda':
+        icon.name = 'Lambda';
+        icon.icon = 'lambda';
+        icon.color = '#FF9900';
+        return icon;
+      case 'cloud':
+        icon.name = 'Cloud';
+        icon.icon = 'cloud';
+        icon.color = '#007ACC';
+        return icon;
+      case 'dynamodb':
+        icon.name = 'DynamoDB';
+        icon.icon = 'database';
+        icon.color = '#FF9900';
         return icon;
       default:
         return icon;

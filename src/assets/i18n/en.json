@@ -13,7 +13,7 @@
   "about": {
     "title": "ABOUT ME",
     "city": "Dois Vizinhos - PR, Brazil",
-    "description": "I am a professional passionate about technology and web development. With extensive experience in programming with skills in Angular and Java languages, in addition to having expertise in PostgreSQL databases. My journey includes manipulating APIs and efficiently using AWS cloud services to ensure scalability and security in my projects. I am a complete developer, focused on creating innovative and efficient solutions for complex challenges in the web environment."
+    "description": "As a Full Stack developer, I gained significant experience at the company LeadFinder, where I have worked since March 2023. During this period, I was instrumental in implementing several features in the system, using technologies such as Angular (with TypeScript), Java and Postgres. I highlight as one of my main contributions the creation of an external and totally new project: a internal chat integrated into our main system, developed as a micro-frontend. This approach does not not only improved system performance, but also usability for users. Led the restructuring and software optimization, implementing techniques such as Lazy Loading and change detection, ensuring an optimized user experience. On the backend, I was responsible for developing methods in Java and managing the database using Postgres. My experience spans a broad spectrum of technologies, including Angular (from 8 to 15), JavaScript, TypeScript, Micro-Frontend,HTML, CSS, SASS, GitHub, CI/CD, Azure, Scrum, Methodologies Agile, Rest API, AWS, and UI/UX."
   },
   "experience": {
     "title": "EXPERIENCE",
